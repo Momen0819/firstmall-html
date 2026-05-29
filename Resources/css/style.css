@@ -74,70 +74,9 @@ theme.
 	
 
 */
-@font-face {
-  font-family: 'Cairo';
-  src: url('../fonts/Cairo/Cairo-Bold.eot');
-  src: url('../fonts/Cairo/Cairo-Bold.eot?#iefix') format('embedded-opentype'),
-    url('../fonts/Cairo/Cairo-Bold.woff2') format('woff2'),
-    url('../fonts/Cairo/Cairo-Bold.woff') format('woff'),
-    url('../fonts/Cairo/Cairo-Bold.ttf') format('truetype'),
-    url('../fonts/Cairo/Cairo-Bold.svg#Cairo-Bold') format('svg');
-  font-weight: bold;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Cairo';
-  src: url('../fonts/Cairo/Cairo-Black.eot');
-  src: url('../fonts/Cairo/Cairo-Black.eot?#iefix') format('embedded-opentype'),
-    url('../fonts/Cairo/Cairo-Black.woff2') format('woff2'),
-    url('../fonts/Cairo/Cairo-Black.woff') format('woff'),
-    url('../fonts/Cairo/Cairo-Black.ttf') format('truetype'),
-    url('../fonts/Cairo/Cairo-Black.svg#Cairo-Black') format('svg');
-  font-weight: 900;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Cairo';
-  src: url('../fonts/Cairo/Cairo-Light.eot');
-  src: url('../fonts/Cairo/Cairo-Light.eot?#iefix') format('embedded-opentype'),
-    url('../fonts/Cairo/Cairo-Light.woff2') format('woff2'),
-    url('../fonts/Cairo/Cairo-Light.woff') format('woff'),
-    url('../fonts/Cairo/Cairo-Light.ttf') format('truetype'),
-    url('../fonts/Cairo/Cairo-Light.svg#Cairo-Light') format('svg');
-  font-weight: 300;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Cairo';
-  src: url('../fonts/Cairo/Cairo-Medium.eot');
-  src: url('../fonts/Cairo/Cairo-Medium.eot?#iefix') format('embedded-opentype'),
-    url('../fonts/Cairo/Cairo-Medium.woff2') format('woff2'),
-    url('../fonts/Cairo/Cairo-Medium.woff') format('woff'),
-    url('../fonts/Cairo/Cairo-Medium.ttf') format('truetype'),
-    url('../fonts/Cairo/Cairo-Medium.svg#Cairo-Medium') format('svg');
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Cairo';
-  src: url('../fonts/Cairo/Cairo-Regular.eot');
-  src: url('../fonts/Cairo/Cairo-Regular.eot?#iefix') format('embedded-opentype'),
-    url('../fonts/Cairo/Cairo-Regular.woff2') format('woff2'),
-    url('../fonts/Cairo/Cairo-Regular.woff') format('woff'),
-    url('../fonts/Cairo/Cairo-Regular.ttf') format('truetype'),
-    url('../fonts/Cairo/Cairo-Regular.svg#Cairo-Regular') format('svg');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
+/* Cairo @font-face declarations live in brand.css (woff2, weights 400/500/600/700,
+   Latin + Arabic subsets). The old Tajawal-renamed blocks pointed at
+   ../fonts/Cairo/Cairo-*.{eot,woff,ttf} which do not exist and 404'd. Removed. */
 
 * {
   outline: none !important;

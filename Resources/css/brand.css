@@ -145,3 +145,63 @@ html:not([dir="rtl"]) .page-banner h1 { font-family:'Cormorant Garamond', Georgi
 /* ---------- Section helpers ---------- */
 .bg-surface { background:#FAF7F2; }
 .lead-narrow { max-width:680px; margin-inline:auto; color:#5A5A5A; line-height:1.9; }
+
+/* ============================================================
+   Scrolled (sticky) navbar — burgundy, not white.
+   The wordmark is white linework, so a white sticky bar made it
+   vanish. We keep the bar burgundy and the wordmark white instead.
+   Covers EN + AR (shared stylesheet).
+   ============================================================ */
+.navbar.fixed {
+  background-color:#61182B;
+  box-shadow:0 10px 34px rgba(63,15,28,.22);
+  border-bottom:1px solid rgba(196,148,95,.45); /* gold hairline */
+  padding-top:14px; padding-bottom:14px;
+}
+/* keep the white wordmark visible on the burgundy bar */
+.navbar.fixed .logo .logo-white { display:block; filter:brightness(0) invert(1); }
+.navbar.fixed .logo .logo-dark  { display:none; }
+/* menu text white on burgundy, gold on active/hover */
+.navbar.fixed .site-menu ul li a { color:#fff; }
+.navbar.fixed .site-menu ul li.active a,
+.navbar.fixed .site-menu ul li a:hover { color:#E8DACA; }
+.navbar.fixed .site-menu ul li a::before { background:#C4945F; } /* gold underline */
+/* language switcher + its world icon */
+.navbar.fixed .lang a { color:#fff; }
+.navbar.fixed .lang a:hover { color:#E8DACA; }
+/* mobile hamburger strokes stay light on the burgundy bar */
+.navbar.fixed .hamburger-menu .line { stroke:#fff; }
+
+/* ============================================================
+   Color-system polish (frontend-design pass)
+   ============================================================ */
+:root{
+  --fm-burgundy:#61182B; --fm-burgundy-deep:#3F0F1C;
+  --fm-gold:#C4945F; --fm-gold-pale:#E8DACA;
+  --fm-ink:#252525; --fm-surface:#FAF7F2; --fm-sand:#F2EBE0;
+}
+/* warm paper base instead of stark white for richer atmosphere */
+body { background-color:var(--fm-surface); color:var(--fm-ink); }
+/* alternating sections breathe on the warm/sand palette */
+.content-section { background:#FFFFFF; }
+.content-section:nth-of-type(even){ background:var(--fm-surface); }
+/* refined custom-button: burgundy with gold ring, gold fill on hover */
+.custom-button { background:var(--fm-burgundy); border:1px solid var(--fm-burgundy); color:#fff; letter-spacing:2px; }
+.custom-button:before { background:var(--fm-gold); }
+.top-nav .custom-button { background:transparent; border-color:rgba(255,255,255,.55); }
+.top-nav .custom-button:hover { color:var(--fm-burgundy-deep) !important; }
+/* eyebrow underline accents already gold; make blockquotes/HRs gold too */
+hr { border-color:var(--fm-gold-pale); }
+::selection { background:var(--fm-gold); color:var(--fm-burgundy-deep); }
+/* scrollbar thumb on supporting browsers */
+body::-webkit-scrollbar-thumb { background:var(--fm-burgundy); }
+/* contact form fields pick up the warm palette + gold focus ring */
+.contact-form input, .contact-form textarea {
+  background:#fff; border:1px solid var(--fm-gold-pale); color:var(--fm-ink);
+  transition:border-color .25s ease, box-shadow .25s ease;
+}
+.contact-form input:focus, .contact-form textarea:focus {
+  outline:none; border-color:var(--fm-gold); box-shadow:0 0 0 3px rgba(196,148,95,.18);
+}
+/* google-map iframe gets a soft top divider in brand tone */
+iframe[title]{ border-top:3px solid var(--fm-gold) !important; }
