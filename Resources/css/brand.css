@@ -1,0 +1,147 @@
+/* ============================================================
+   First Mall — brand override layer (loaded LAST)
+   Burgundy #61182B · deep #3F0F1C · gold #C4945F · gold-pale #E8DACA
+   Fonts: Cairo (body + Arabic) · Cormorant Garamond (EN display)
+   ============================================================ */
+
+/* ---------- Cairo (Latin) ---------- */
+@font-face { font-family:'Cairo'; font-style:normal; font-weight:400; font-display:swap;
+  src:url('../fonts/cairo/cairo-latin-400.woff2') format('woff2');
+  unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD; }
+@font-face { font-family:'Cairo'; font-style:normal; font-weight:500; font-display:swap;
+  src:url('../fonts/cairo/cairo-latin-500.woff2') format('woff2');
+  unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD; }
+@font-face { font-family:'Cairo'; font-style:normal; font-weight:600; font-display:swap;
+  src:url('../fonts/cairo/cairo-latin-600.woff2') format('woff2');
+  unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD; }
+@font-face { font-family:'Cairo'; font-style:normal; font-weight:700; font-display:swap;
+  src:url('../fonts/cairo/cairo-latin-700.woff2') format('woff2');
+  unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD; }
+
+/* ---------- Cairo (Arabic) ---------- */
+@font-face { font-family:'Cairo'; font-style:normal; font-weight:400; font-display:swap;
+  src:url('../fonts/cairo/cairo-arabic-400.woff2') format('woff2');
+  unicode-range:U+0600-06FF,U+0750-077F,U+0870-088E,U+0890-0891,U+0898-08E1,U+08E3-08FF,U+200C-200E,U+2010-2011,U+204F,U+2E41,U+FB50-FDFF,U+FE70-FEFF; }
+@font-face { font-family:'Cairo'; font-style:normal; font-weight:500; font-display:swap;
+  src:url('../fonts/cairo/cairo-arabic-500.woff2') format('woff2');
+  unicode-range:U+0600-06FF,U+0750-077F,U+0870-088E,U+0890-0891,U+0898-08E1,U+08E3-08FF,U+200C-200E,U+2010-2011,U+204F,U+2E41,U+FB50-FDFF,U+FE70-FEFF; }
+@font-face { font-family:'Cairo'; font-style:normal; font-weight:600; font-display:swap;
+  src:url('../fonts/cairo/cairo-arabic-600.woff2') format('woff2');
+  unicode-range:U+0600-06FF,U+0750-077F,U+0870-088E,U+0890-0891,U+0898-08E1,U+08E3-08FF,U+200C-200E,U+2010-2011,U+204F,U+2E41,U+FB50-FDFF,U+FE70-FEFF; }
+@font-face { font-family:'Cairo'; font-style:normal; font-weight:700; font-display:swap;
+  src:url('../fonts/cairo/cairo-arabic-700.woff2') format('woff2');
+  unicode-range:U+0600-06FF,U+0750-077F,U+0870-088E,U+0890-0891,U+0898-08E1,U+08E3-08FF,U+200C-200E,U+2010-2011,U+204F,U+2E41,U+FB50-FDFF,U+FE70-FEFF; }
+
+/* ---------- Cormorant Garamond (EN display) ---------- */
+@font-face { font-family:'Cormorant Garamond'; font-style:normal;  font-weight:400; font-display:swap; src:url('../fonts/cormorant/cormorant-400.woff2') format('woff2'); }
+@font-face { font-family:'Cormorant Garamond'; font-style:italic;  font-weight:400; font-display:swap; src:url('../fonts/cormorant/cormorant-400-italic.woff2') format('woff2'); }
+@font-face { font-family:'Cormorant Garamond'; font-style:normal;  font-weight:500; font-display:swap; src:url('../fonts/cormorant/cormorant-500.woff2') format('woff2'); }
+@font-face { font-family:'Cormorant Garamond'; font-style:italic;  font-weight:500; font-display:swap; src:url('../fonts/cormorant/cormorant-500-italic.woff2') format('woff2'); }
+@font-face { font-family:'Cormorant Garamond'; font-style:normal;  font-weight:600; font-display:swap; src:url('../fonts/cormorant/cormorant-600.woff2') format('woff2'); }
+@font-face { font-family:'Cormorant Garamond'; font-style:italic;  font-weight:600; font-display:swap; src:url('../fonts/cormorant/cormorant-600-italic.woff2') format('woff2'); }
+
+/* ---------- Base type ---------- */
+body { font-family:'Cairo', system-ui, -apple-system, "Segoe UI", sans-serif; }
+
+/* Cormorant display headings — English (LTR) only; Arabic stays Cairo */
+html:not([dir="rtl"]) .section-title h2,
+html:not([dir="rtl"]) header.slider h1,
+html:not([dir="rtl"]) .page-banner h1 {
+  font-family:'Cormorant Garamond', Georgia, serif;
+  font-weight:600;
+  letter-spacing:-0.01em;
+}
+[dir="rtl"] .section-title h2,
+[dir="rtl"] header.slider h1 { font-weight:700; }
+
+/* ---------- Gold eyebrow / accents ---------- */
+.section-title h6.text-green,
+.text-green,
+.sub-title { color:#C4945F !important; }
+.section-title h6.text-green:before,
+.section-title h6.text-green:after { background:#C4945F !important; }
+
+/* ---------- Buttons: burgundy base, gold hover fill ---------- */
+.custom-button:hover:before { background:#C4945F !important; }
+.custom-button:hover { color:#3F0F1C !important; }
+button[type="submit"] { background:#61182B; color:#fff; border:none; letter-spacing:2px; }
+button[type="submit"]:hover { background:#C4945F; color:#3F0F1C; }
+
+/* ---------- Links / hovers ---------- */
+a:hover { color:#C4945F; }
+.site-menu ul li a:hover,
+.footer-menu a:hover,
+.nav-menu li a:hover { color:#C4945F; }
+
+/* ---------- Footer: deep burgundy ---------- */
+.footer { background:#3F0F1C; color:#E8DACA; }
+.footer p, .footer .copyright, .footer .creation a { color:#E8DACA; }
+.footer .widget-title { color:#fff; }
+.footer .footer-menu a { color:#E8DACA; }
+.footer .social a { color:#E8DACA; }
+.footer .social a:hover { color:#C4945F; }
+
+/* ---------- Swiper accents ---------- */
+.swiper-scrollbar-drag { background:#61182B !important; }
+.swiper-pagination-bullet-active { background:#C4945F !important; }
+
+/* ---------- Decorative gold seal helper ---------- */
+.brand-seal { opacity:.06; pointer-events:none; position:absolute; z-index:0; }
+
+/* ---------- Category / facility cards ---------- */
+.cat-card { display:block; background:#fff; border:1px solid #E8DACA; border-radius:6px;
+  padding:34px 20px; text-align:center; transition:transform .3s ease, box-shadow .3s ease, border-color .3s ease; height:100%; }
+.cat-card:hover { transform:translateY(-6px); box-shadow:0 18px 40px rgba(97,24,43,.12); border-color:#C4945F; color:inherit; text-decoration:none; }
+.cat-card img, .cat-card svg { width:56px; height:56px; margin-bottom:18px; }
+.cat-card h5 { margin:0; color:#61182B; font-weight:700; }
+.cat-card p { margin:6px 0 0; color:#5A5A5A; font-size:15px; }
+
+/* ---------- Coming-soon ribbon ---------- */
+.coming-soon-note { display:inline-block; background:#61182B; color:#E8DACA; border:1px solid #C4945F;
+  border-radius:6px; padding:18px 34px; font-size:18px; }
+
+/* ---------- Stats strip ---------- */
+.stats-strip { background:#61182B; color:#fff; padding:64px 0; }
+.stats-strip .stat-num { font-family:'Cormorant Garamond', Georgia, serif; color:#C4945F; font-size:54px; line-height:1; font-weight:600; }
+[dir="rtl"] .stats-strip .stat-num { font-family:'Cairo', sans-serif; font-weight:700; }
+.stats-strip .stat-label { text-transform:uppercase; letter-spacing:3px; font-size:13px; color:#E8DACA; margin-top:10px; }
+
+/* ---------- Logo ---------- */
+.logo img { height:44px; width:auto; }
+.logo .logo-white { filter:brightness(0) invert(1); }
+
+/* ---------- Hero text ---------- */
+.slider .headline { color:#C4945F; text-transform:uppercase; letter-spacing:4px; font-size:15px; font-weight:600; margin-bottom:16px; }
+.slider h1 { color:#fff; font-size:56px; line-height:1.1; max-width:760px; margin:0 auto; }
+.slider .container { text-align:center; }
+html:not([dir="rtl"]) .slider h1 { font-family:'Cormorant Garamond', Georgia, serif; font-weight:600; }
+@media (max-width:767px){ .slider h1{ font-size:34px; } }
+
+/* ---------- Inner page banner ---------- */
+.page-banner { position:relative; padding:170px 0 90px; background-size:cover; background-position:center; }
+.page-banner:after { content:""; position:absolute; inset:0; background:linear-gradient(180deg, rgba(63,15,28,.78), rgba(63,15,28,.88)); }
+.page-banner .container { position:relative; z-index:1; text-align:center; }
+.page-banner .crumb { color:#C4945F; text-transform:uppercase; letter-spacing:4px; font-size:13px; font-weight:600; margin-bottom:14px; }
+.page-banner h1 { color:#fff; font-size:48px; margin:0; }
+html:not([dir="rtl"]) .page-banner h1 { font-family:'Cormorant Garamond', Georgia, serif; font-weight:600; }
+.page-banner .crumb a { color:#E8DACA; }
+@media (max-width:767px){ .page-banner h1{ font-size:32px; } .page-banner{ padding:140px 0 64px; } }
+
+/* ---------- Facility feature columns ---------- */
+.facility-col { padding:10px 0; }
+.facility-col .fc-icon { width:64px; height:64px; border-radius:50%; background:#FAF7F2; border:1px solid #E8DACA; display:flex; align-items:center; justify-content:center; margin-bottom:18px; }
+.facility-col .fc-icon i { font-size:26px; color:#61182B; }
+.facility-col h4 { color:#61182B; font-weight:700; margin-bottom:14px; }
+.facility-col ul { list-style:none; padding:0; margin:0; }
+.facility-col ul li { position:relative; padding-inline-start:18px; margin-bottom:10px; color:#5A5A5A; }
+.facility-col ul li:before { content:""; position:absolute; inset-inline-start:0; top:10px; width:7px; height:7px; border-radius:50%; background:#C4945F; }
+
+/* ---------- Contact info rows ---------- */
+.contact-info .ci-row { display:flex; gap:16px; align-items:flex-start; margin-bottom:26px; }
+.contact-info .ci-row i { font-size:22px; color:#C4945F; margin-top:4px; }
+.contact-info .ci-row h6 { margin:0 0 4px; color:#61182B; font-weight:700; text-transform:uppercase; letter-spacing:1px; font-size:13px; }
+.contact-info .ci-row p { margin:0; color:#5A5A5A; }
+
+/* ---------- Section helpers ---------- */
+.bg-surface { background:#FAF7F2; }
+.lead-narrow { max-width:680px; margin-inline:auto; color:#5A5A5A; line-height:1.9; }
