@@ -43,6 +43,15 @@
 /* ---------- Base type ---------- */
 body { font-family:'Cairo', system-ui, -apple-system, "Segoe UI", sans-serif; }
 
+/* Form controls + buttons do NOT inherit font-family by default — force Cairo
+   so typed text, placeholders and dropdowns match the rest of the site. */
+input, select, textarea, button, optgroup, option,
+.form-control, .custom-button, .btn {
+  font-family:'Cairo', system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+input::placeholder, textarea::placeholder { font-family:'Cairo', sans-serif; }
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder { font-family:'Cairo', sans-serif; }
+
 /* Cormorant display headings — English (LTR) only; Arabic stays Cairo */
 html:not([dir="rtl"]) .section-title h2,
 html:not([dir="rtl"]) header.slider h1,
