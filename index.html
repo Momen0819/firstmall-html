@@ -337,5 +337,20 @@
         <i class="lni lni-chevron-up"></i>
     </button>
     <script src="Resources/js/home.js"></script>
+    <script>
+    (function(){
+        var v = document.querySelector('.hero-video');
+        if (!v) return;
+        v.muted = true; // muted is required for autoplay policy
+        function kick(){ var p = v.play(); if (p && p.catch) p.catch(function(){}); }
+        if (v.readyState >= 2) kick();
+        ['loadeddata','canplay'].forEach(function(e){ v.addEventListener(e, kick); });
+        document.addEventListener('visibilitychange', function(){ if (!document.hidden) kick(); });
+        ['click','touchstart','scroll','keydown','pointerdown'].forEach(function(e){
+            window.addEventListener(e, kick, { once: true, passive: true });
+        });
+        window.addEventListener('load', kick);
+    })();
+    </script>
 </body>
 </html>
