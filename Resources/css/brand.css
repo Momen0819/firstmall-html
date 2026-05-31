@@ -90,6 +90,18 @@ a:hover { color:#C4945F; }
 .footer .social a { color:#E8DACA; }
 .footer .social a:hover { color:#C4945F; }
 
+/* Footer column layout — distribute evenly and fix RTL.
+   Bootstrap's offset-lg-1 uses margin-left, which does NOT mirror in RTL,
+   so the Arabic Contact column collapsed under the logo and left the far
+   side empty. Neutralize the offsets and use space-between so EN (LTR) and
+   AR (RTL) lay out identically as three balanced columns. */
+@media (min-width: 992px) {
+  .footer .row { justify-content: space-between; }
+  .footer .row > .offset-lg-1 { margin-left: 0; }
+}
+[dir="rtl"] .footer .footer-menu a,
+[dir="rtl"] .footer p { text-align: right; }
+
 /* ---------- Swiper accents ---------- */
 .swiper-scrollbar-drag { background:#61182B !important; }
 .swiper-pagination-bullet-active { background:#C4945F !important; }
