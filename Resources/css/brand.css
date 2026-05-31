@@ -116,6 +116,10 @@ a:hover { color:#C4945F; }
 .cat-card img, .cat-card svg { width:56px; height:56px; margin-bottom:18px; }
 .cat-card h5 { margin:0; color:#61182B; font-weight:700; }
 .cat-card p { margin:6px 0 0; color:#5A5A5A; font-size:15px; }
+/* compact category chips (home "shop by category" teaser) */
+.cat-card--compact { padding:22px 12px; }
+.cat-card--compact i { font-size:38px !important; color:#C4945F; margin-bottom:10px; display:block; }
+.cat-card--compact h5 { font-size:16px; }
 
 /* ---------- Coming-soon ribbon ---------- */
 .coming-soon-note { display:inline-block; background:#61182B; color:#E8DACA; border:1px solid #C4945F;
